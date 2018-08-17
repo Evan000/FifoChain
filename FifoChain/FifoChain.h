@@ -1,12 +1,13 @@
 #ifndef _FIFO_CHAIN
 #define _FIFO_CHAIN
 
+//宏定义一个节点类型，这样可以对于不同数据结构的节点都能方便使用
 #define DE_ChainNodeType struct LogNode
 
 struct ChainAccessType{
-	DE_ChainNodeType * pstStartNode;
-	DE_ChainNodeType * pstEndNode;
-//	unsigned int uiChainNumber;
+	DE_ChainNodeType * pstStartNode;//指向最先加入链表的节点
+	DE_ChainNodeType * pstEndNode;//指向最后加入链表的节点
+//	unsigned int uiChainNumber;//用于记录链表中的节点数目
 };
 
 //日志节点类型，用于创建日志链表
